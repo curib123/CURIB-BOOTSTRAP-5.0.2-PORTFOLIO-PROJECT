@@ -1,0 +1,368 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+/* Variables */
+:root {
+    --c-brand: #8A2BE2;
+    --c-brand-rgb: 248, 54, 145;
+    --c-dark: #303050;
+    --c-body: #636383;
+    --c-light: #f6f6f6;
+    --f-main: "Bai Jamjuree", sans-serif;
+  
+    
+}
+
+
+
+
+body {
+    font-family: var(--f-main);
+    color: var(--c-body);
+ 
+ 
+ 
+ /* Pre Defined helpers */
+   
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+
+
+img {
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: 100px;
+  
+   
+}
+
+
+.text-brand {
+    color: var(--c-brand);
+}
+.bg-brand{
+    background: var(--c-brand);
+}
+
+/* Curib navigation */
+
+.social-links a{
+    color: #fff;
+    background: rgba(254,254,254,0.5);
+    align-items: center;
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 5px;
+    border-radius: 100px;
+}
+.social-links a:hover{
+    background: #fff;
+    color: var(--c-brand);
+    transition: 0.5s;
+}
+
+.line{
+    width :80px;
+    height: 3px;
+    margin: 5px auto 20px auto;
+    background: var(--c-brand);
+}
+
+.nav-item .nav-link{
+    position: relative;
+}
+
+.nav-item .nav-link::after{
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    border-radius: 10px;
+    left: 3px;
+    width: 0px;
+    height: 3px;
+    background: transparent;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover::after{
+    background: var(--c-brand);
+    width: 40px;
+}
+nav .btn:hover{
+    color: black;
+    border: 1px solid black;
+}
+
+/* Curib Home */
+#home-1{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/testimonials-bg.jpg);    background-position: center;
+    background-size: cover;
+}
+#home-2{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url(../images/hero-bg.jpg);    background-position: center;
+    background-size: cover;
+}
+
+
+/* Curib About */
+
+
+.icon-box{
+    background: var(--c-brand) ;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+}
+.icon-circle{
+    background: var(--c-brand) ;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-weight: 700;
+    
+    
+}
+#about .icon-box{
+    background: var(--c-brand) ;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    margin: 5px 5px 0 0;
+}
+
+/* Curib Services */
+
+#services .h6{
+  margin-top: 3px;
+  margin-right: 8px;
+  text-decoration: none;
+  
+}
+  #services a:hover{
+    color: var(--c-brand);
+    
+}
+
+
+#services .card{
+    z-index: 2;
+    position: relative;
+    
+}
+#services .card::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 50px;
+    background: transparent;
+    opacity: 0;
+    transform: scale(0.2);
+    transition: 0.5s ease;
+}
+#services .card:hover::after{
+    width: 100%;
+    height: 100%;
+    background: blueviolet;
+    z-index: -1;
+    transform: scale(1);
+    opacity: 1;
+}
+#services .card:hover h1,
+#services .card:hover .h6,
+#services .card:hover p{
+    color: white;
+    transition: 0.5s ease;
+    
+}
+#services .card:hover .icon-box,
+#services .card:hover .icon-circle{
+    background: white;
+    color: blueviolet;
+    transition: 0.5s ease;
+}
+
+
+/* Curib Portfolio */
+
+.content{
+    overflow: hidden;
+    position: relative;
+}
+.content .view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.2);
+    opacity: 0;
+    background: blueviolet;
+    width: 100%;
+    height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.content .view a{
+    color: #fff;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1px 7px;
+    font-weight: 600px;
+}
+
+.content:hover .view{
+    transform: translate(-50%,-50%) scale(1);
+    transition: 0.5s ease;
+    opacity: 0.9;
+}
+
+/* Curib Contact */
+
+#contact input{
+    border-radius: 0;
+    
+}
+#contact input:focus, #contact textarea:focus{
+    border-color: blueviolet;
+    box-shadow: none;
+    
+}
+
+/* Curib Footer */
+
+footer {
+    background-color: var(--c-dark);
+    padding-top: 80px;
+    margin-top: 100px;
+}
+
+footer h4 {
+    color: white;
+    margin-bottom: 24px;
+}
+
+footer p,
+footer li, 
+footer li a {
+    color: rgba(255,255,255, 0.7);
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-top: 6px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-bottom a {
+    color: var(--c-brand);
+    text-decoration: none;
+}
+
+footer .social-links a{
+    color: #fff;
+    background: blueviolet;
+    align-items: center;
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 5px;
+    border-radius: 100px;
+}
+footer .social-links a:hover{
+    background: #fff;
+    color: var(--c-brand);
+    transition: 0.5s;
+}
+
+/* Curib Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid blueviolet;
+  border-top-color: #e2eefd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
